@@ -245,6 +245,10 @@ button:active {
 margin: 0 auto;
 }
 
+.skills-list:hover .skill-card:not(:hover){
+  transform: scale(0.9);
+}
+
 .skill-card {
   background: #000;
   padding: .5rem;
@@ -513,6 +517,10 @@ footer p {
   margin: 0 auto;
 }
 
+.projects-grid:hover .project-card:not(:hover){
+  transform: scale(0.9);
+}
+
 .project-card {
   background: black;
   padding: 20px;
@@ -523,10 +531,24 @@ footer p {
 
 .project-card:hover {
   transform: translateY(-5px);
+  background-color: rgb(37, 154, 158) ;
+  box-shadow: 0 8px 12px rgba(37, 154, 158, 0.8);
+  .project-description{
+    color: white;
+  }
+  .view{
+    background-color: black;
+    width: 120px;
+    margin: 0 auto;
+    border-radius: 10px;
+    .project-link{
+      margin-left: -15px;
+    }
+  }
 }
 
 .project-card:hover .project-title,
-.project-card:hover .project-link {
+.project-card:hover .project-link, .project-card:hover .view-icon {
   color: white;
 }
 
@@ -544,16 +566,25 @@ footer p {
 }
 
 .project-link {
-  display: inline-block;
   padding: 8px 16px;
-  background: black;
   color: #887d7d;
-  text-decoration: none;
   font-size: small;
   border-radius: 5px;
+  text-decoration: none;
   transition: background 0.3s ease;
 }
 
 .project-image {
   width: 250px;
+}
+
+.view{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-icon{
+  margin-left: -13px;
+  margin-top: 4px;
 }

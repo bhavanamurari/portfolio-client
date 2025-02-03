@@ -1,4 +1,5 @@
 import React from "react";
+import { IoMdOpen } from "react-icons/io";
 
 const projects = [
   {
@@ -34,16 +35,21 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div key={index} className="project-card">
             <h3 className="project-title">{project.title}</h3>
-            <img src={project.image} alt="images" className="project-image"/>
+            <img src={project.image} alt="images" className="project-image" />
             <p className="project-description">{project.description}</p>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link"
-            >
-              View Project
-            </a>
+            <div className="view">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                View Project
+              </a>
+              <div className="view-icon">
+                <IoMdOpen />
+              </div>
+            </div>
           </div>
         ))}
       </div>
